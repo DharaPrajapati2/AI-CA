@@ -1,55 +1,71 @@
-# AI-CA — Indian CA & Tax Workspace
+# 🤖 AI CA
 
-A responsive React + Vite app prototype for Indian tax workflows: ITR guidance, GST and TDS calculators, invoice tracking, expenses, tasks, reports, and a rule-based demo advisor.
+**AI CA** is a Design Thinking project developed for a subject at **JG University**. It explores how an AI-assisted tax companion could help individuals and small businesses understand everyday GST and tax questions, while allowing for Chartered Accountant (CA) review when needed.
 
-## Run locally
+> This repository presents a student project and website prototype. It is not a tax filing service or a substitute for professional tax advice.
 
-```bash
-npm install
-npm run dev
-```
+## 💡 Project overview
 
-## Build
+The team researched challenges people face when dealing with GST and tax, then used those findings to develop a problem statement and prototype concept. The research included **120 survey responses** and **4 interviews**.
 
-```bash
-npm run build
-npm run preview
-```
+Key survey findings reported in the project presentation:
 
-## Database and authentication
+- **31.7%** said calculating tax or GST was the most difficult part.
+- **19.2%** said understanding tax rules was the most difficult part.
+- **16.7%** said maintaining records was the most difficult part.
 
-The interface currently works in **local demo mode** and persists demo invoices, expenses, tasks, and workspace settings in the browser. This is not a production database.
+The project focused on small business owners and individuals, including salaried people, freelancers, students, homemakers, and people who consult a CA.
 
-To enable Supabase authentication:
-1. Create a Supabase project.
-2. Copy `.env.example` to `.env`.
-3. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-4. Restart the development server.
+## 🧠 Design Thinking process
 
-The client detects configured Supabase credentials and enables account sign-in/sign-up. Before storing customer tax information, implement and verify the SQL schema, Row Level Security policies, private storage, and server-side data operations. Do not expose a service-role key in the frontend.
+The team used these methods and tools during the project:
 
-## AI advisor
+- Survey research and interviews
+- Market and competitor scan
+- Affinity mapping
+- User persona
+- Empathy map
+- Day-in-the-life exercise
+- User journey mapping
+- Problem statement and “How might we” question
+- Ideation and website prototyping
 
-The advisor has a clearly disclosed rule-based fallback. A real AI integration is not included in this client-only starter because private API keys must never be exposed to the browser. Add a server-side `/api/advisor` endpoint on a backend host, configure the provider key as a server secret, and add authentication, rate limits, validation, and logging before enabling real AI responses.
+## ✨ Proposed concept
 
-## Important tax notice
+AI CA is a concept for a “pocket Chartered Accountant” that aims to make tax and GST information simpler to understand. The proposed website prototype includes:
 
-ITR recommendations and tax calculators in this starter are preliminary educational aids. GST and TDS calculators use user-entered rates. The salary tax estimate is simplified and does not fully implement all current-year slabs, rebates, cess, surcharge, deductions, or special-rate income. Do not use it for filing or payment decisions until the tax engine is implemented and tested against official current-year rules and reviewed by a qualified CA.
+- Plain-language AI tax answers, with an option for CA review
+- GST, TDS, and old-versus-new income tax regime calculators
+- Error explanations and guidance on how to fix issues
+- Invoice creation and tracking
+- Tax document and record organization
+- PAN and GSTIN checks
+- Tax rule-change alerts and compliance reminders
+- A tax library with practical explanations
 
-## Deploy
+These are features represented in the project concept and prototype; this repository does not imply that every feature is connected to live tax systems or ready for production use.
 
-For a static frontend, deploy the Vite build to Netlify or Vercel. GitHub Pages can host the static frontend but cannot host a server-side AI API or secure backend by itself. Configure backend hosting and environment secrets separately.
+## 🔗 Prototype and presentation
 
+- **Live website:** https://aica-ruddy.vercel.app/
+- **Canva presentation:** https://canva.link/eoyz0kg26ogw08u
 
-## Added in the AI-CA upgrade
-- Rebranded interface and account entry point.
-- Tax document hub covering Form 16, Form 16A, Form 26AS/AIS, ITR, GST challans/returns, e-invoice/e-way bill, TDS statements and MCA/Udyam links.
-- Login/sign-up uses Supabase Auth when configured; without credentials, the app remains a local demo and cannot create real accounts.
+## 👥 Team
 
-## Production-readiness checklist
-This remains a frontend starter, not a country-wide live tax filing service. Before public launch, configure Supabase Auth, database tables and row-level security; build server-side APIs; add audited current-year tax rules, secure document storage, tenant isolation, backups, monitoring, privacy/consent flows, and professional legal/CA review. The document hub links to official portals and does not submit filings.
+- Jainam Vyas
+- Dhara Prajapati
+- Dhruvi Malvi
+- Palak Garach
 
-## Recent UI additions
-- A welcome / sign-in screen appears first. Users can sign in, create an account, or continue in demo mode.
-- The PAN / Aadhaar / GST checks section links to official portals and provides a local checklist only. It does not verify identity or call government APIs, and it intentionally does not collect sensitive ID numbers or OTPs.
-- The “Which tax applies to me?” guide gives separate general checklists for business owners/freelancers and salaried employees. It is educational guidance, not a personalised tax determination.
+🎓 **Institution:** JG University  
+📘 **Subject:** Design Thinking  
+👩‍🏫 **Subject teacher:**  Anukreeti Chaudhry Ma'am
+
+## 🚀 Getting started
+
+Setup instructions depend on the framework and package manager used for the website. Add the appropriate install and development commands here once the project files are in this repository.
+
+## 🙏 Acknowledgements
+
+Thank you to our subject teacher for their guidance and to JG University for the opportunity to work on this project.
+
